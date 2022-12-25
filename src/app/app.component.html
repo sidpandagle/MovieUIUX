@@ -1,0 +1,53 @@
+<div class="wrapper" style.background-image="url({{selectedBackground()}})">
+  <div class="header">
+    <div class="logo">SHOWCASE</div>
+    <div class="navigations">
+      <div class="navigation">SEARCH</div>
+      <div class="navigation">HOME</div>
+      <div class="navigation">MOVIE</div>
+      <div class="navigation">TV SHOW</div>
+      <div class="navigation">--</div>
+    </div>
+  </div>
+  <div class="main">
+    <div class="mcontent">
+      <div class="title">LA LA LAND</div>
+      <div class="details">
+        <div class="category">Romance, Drama</div>
+        <div class="year">
+          <div class="yicon">Y</div>
+          <div class="myear">2019</div>
+        </div>
+        <div class="minute">
+          <div class="micon">M</div>
+          <div class="mmin">128 min</div>
+        </div>
+      </div>
+      <div class="details">
+        <div class="rating">Stars</div>
+        <div class="pg dbtn">PG-13</div>
+      </div>
+      <div class="details">
+        <div class="book dbtn selected">Books</div>
+        <div class="reviews dbtn">Reviews</div>
+        <div class="more dbtn">More</div>
+      </div>
+    </div>
+    <div class="msubcontent">
+      <div class="details right-align">
+        XYZ <span style="color: #FFF004;"> Director</span>
+      </div>
+      <div class="details right-align">
+        XYZ <span style="color: #FFF004;">Stars</span>
+      </div>
+      <div class="description-container">
+        <div class="description">
+          While navigating their careers in Los Angeles a pianist and an actress fall in love while attempting to reconcile their aspirations for the future.
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="select-navigations">
+    <div class="snavigation" (click)="changeBackground(i)" *ngFor="let data of bkwallpapers;let i = index;" [ngClass]="data.selected?'nav-selected':''"></div>
+  </div>
+</div>
