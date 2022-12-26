@@ -1,12 +1,13 @@
 <div class="wrapper" style.background-image="url({{selectedBackground()}})">
   <div class="header">
-    <div class="logo">SHOWCASE</div>
+    <div class="logo">SHOWCASE
+      </div>
     <div class="navigations">
       <div class="navigation">SEARCH</div>
       <div class="navigation">HOME</div>
       <div class="navigation">MOVIE</div>
       <div class="navigation">TV SHOW</div>
-      <div class="navigation">--</div>
+      <div class="navigation"><img class="navigation" src="../assets/icons/menu.png" style="height: 20px;"></div>
     </div>
   </div>
   <div class="main">
@@ -35,10 +36,10 @@
     </div>
     <div class="msubcontent">
       <div class="details right-align">
-        XYZ <span style="color: #FFF004;"> Director</span>
+        Damien Chazelle <span style="color: #FFF004;"> Director</span>
       </div>
       <div class="details right-align">
-        XYZ <span style="color: #FFF004;">Stars</span>
+        Emma Stone, Ryan Gosling <span style="color: #FFF004;">Stars</span>
       </div>
       <div class="description-container">
         <div class="description">
@@ -51,3 +52,6 @@
     <div class="snavigation" (click)="changeBackground(i)" *ngFor="let data of bkwallpapers;let i = index;" [ngClass]="data.selected?'nav-selected':''"></div>
   </div>
 </div>
+
+<div class="larrow arrow" (click)="prevBackground()"><img style="height: 50px; width: 50px;" src="../assets/icons/doubleleft.png" alt=""></div>
+<div class="rarrow arrow" (click)="nextBackground()"><img style="height: 50px; width: 50px;transform: rotate(180deg);" src="../assets/icons/doubleleft.png" alt=""></div>
